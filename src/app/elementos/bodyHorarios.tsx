@@ -23,7 +23,7 @@ const Body: React.FC = () => {
                     materias: [
                       {
                         id:1,
-                        nombreMateria: 'Introducción a la Programación',
+                        nombreMateria: 'Albañil con casco',
                         Docentes:[
                           {
                             id:1,
@@ -242,17 +242,24 @@ const Body: React.FC = () => {
     const handleNavigationClick = (e: React.MouseEvent<HTMLDivElement>) => {
         const currentElement = e.target as HTMLElement;
         if (currentElement.matches('[data-dropdown], [data-dropdown] *')) {
-        const parentLi = currentElement.closest("li");
-        if (parentLi?.hasAttribute("data-toggle")) {
-            parentLi.removeAttribute("data-toggle");
-        } else {
-            parentLi?.setAttribute("data-toggle", "");
-        }
+            const parentLi = currentElement.closest("li");
+            const parentSVG = currentElement.closest('[data-dropdown]')?.querySelector("svg");
+            if (parentLi?.hasAttribute("data-toggle")) {
+                parentLi.removeAttribute("data-toggle");
+            } else {
+                parentLi?.setAttribute("data-toggle", "");
+            }
+            if (parentSVG?.hasAttribute("data-row")) {
+                parentSVG.removeAttribute("data-row");
+            } else {
+                parentSVG?.setAttribute("data-row", "");
+            }
         }
     };
+    
     return (
-        <div className="container mx-auto mt-4 text-black font-semibold" data-id="menu" onClick={handleNavigationClick}>
-            <div className="flex items-center">
+        <div className="flex container mx-auto mt-4 text-black font-semibold " data-id="menu" onClick={handleNavigationClick}>
+            <div className="w-[22%] min-h-screen border-r-2  ">
                 <select
                     className="bg-sky-400 block w-64 py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     onChange={handleChangeCarrera}
@@ -266,7 +273,8 @@ const Body: React.FC = () => {
                         </option>
                     ))}
                 </select>
-                <ul className="px-10 py-5 inline">
+                <hr />
+                <ul className="">
                     {carreraSeleccionada.id===-1?
                         <div></div>
                     :
@@ -274,7 +282,219 @@ const Body: React.FC = () => {
                     }
                 </ul>
             </div>
-            
+            <div className='inline ml-4'>
+                    <table id='miTabla'>
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sabado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>6:45</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>7:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>8:15</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+                        
+                            <tr>
+                                <td>9:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>9:45</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>10:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>11:15</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>12:45</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>13:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+                            <tr>
+                                <td>14:15</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+                            <tr>
+                                <td>15:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>15:45</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>16:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>17:15</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>18:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>18:45</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>19:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+
+                            <tr>
+                                <td>20:15</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+                            <tr>
+                                <td>21:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td className='tdEspecial'></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
         </div>
     );
 };

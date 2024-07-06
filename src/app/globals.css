@@ -25,7 +25,24 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+th{
+  font-size: 1rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+td{
+  padding-left: 40px;
+  border-right: 2px solid gray;
+  border-top: 1px solid gray;
+}
+table{
+  height: 400px;
+  width: 400px;
+  font-size: 0.9rem;
+}
+.tdEspecial{
+  border-right: none;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -47,6 +64,9 @@ body {
   }
   .link-parent[data-toggle] {
     @apply grid-rows-[max-content_1fr];
+  }
+  [data-toggle] [data-row]{
+    @apply rotate-180
   }
   .link-child {
     @apply overflow-hidden ml-4 border-gray-200;
