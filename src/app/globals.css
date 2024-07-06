@@ -31,3 +31,24 @@ body {
     text-wrap: balance;
   }
 }
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .link-parent {
+    
+    @apply grid grid-rows-[max-content_0fr] 
+    
+    overflow-hidden transition-[grid-template-rows] 
+    cursor-pointer;
+  }
+  .link-parent[data-toggle] {
+    @apply grid-rows-[max-content_1fr];
+  }
+  .link-child {
+    @apply overflow-hidden ml-4 border-gray-200;
+  }
+}
