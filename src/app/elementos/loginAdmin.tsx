@@ -1,5 +1,5 @@
 "use client";
-
+import BodyAdmin from './bodyAdmin';
 import React, { useState } from 'react';
 
 const LoginAdmin: React.FC = () => {
@@ -62,7 +62,7 @@ const LoginAdmin: React.FC = () => {
                         </div>
                     </div>
                 ) : (
-                    <h1 className="text-3xl text-black">¡Hola! Bienvenido.</h1>
+                    <BodyAdmin />
                 )}
             </div>
         </section>

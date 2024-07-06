@@ -12,7 +12,7 @@ const Body: React.FC = () => {
 
     // Datos de ejemplo para las materias del combobox
     const materias = [
-        'Cálculo I', 'Álgebra Lineal', 'Física General', 'Introducción a la Programación'
+        'Primer semestre', 'Segundo semestre', 'Tercer semestre', 'Cuarto semestre', 'Quinto semestre'
     ];
 
     // Estado para controlar la carrera seleccionada y mostrar el área de añadir materias
