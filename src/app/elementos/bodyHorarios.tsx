@@ -29,17 +29,13 @@ const Body: React.FC = () => {
                                         id: 1,
                                         nombreDocente: 'Leticia Blanco',
                                         numGrupo: '2',
-                                        aula: '691B',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios: []
                                     },
                                     {
                                         id: 2,
                                         nombreDocente: 'Leticia Blanco',
                                         numGrupo: '1',
-                                        aula: '691A',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios:[]
                                     }
                                 ]
                             }, {
@@ -50,17 +46,13 @@ const Body: React.FC = () => {
                                         id: 1,
                                         nombreDocente: 'Benita',
                                         numGrupo: '2',
-                                        aula: '691B',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios: []
                                     },
                                     {
                                         id: 2,
                                         nombreDocente: 'Peeters',
                                         numGrupo: '1',
-                                        aula: '691A',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios:[]
                                     }
                                 ]
                             }
@@ -126,17 +118,39 @@ const Body: React.FC = () => {
                                         id: 1,
                                         nombreDocente: 'Leticia Blanco',
                                         numGrupo: '2',
-                                        aula: '691B',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios:[
+                                            {
+                                                aula: "691B",
+                                                diaPeriodo:'lun-6'
+                                            },
+                                            {
+                                                aula: "691C",
+                                                diaPeriodo:'mar-7'
+                                            },
+                                            {
+                                                aula: "692B",
+                                                diaPeriodo:'mie-7'
+                                            }
+                                        ]
                                     },
                                     {
                                         id: 2,
                                         nombreDocente: 'Leticia Blanco',
                                         numGrupo: '1',
-                                        aula: '691A',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios:[
+                                            {
+                                                aula: "693B",
+                                                diaPeriodo:'lun-5'
+                                            },
+                                            {
+                                                aula: "691C",
+                                                diaPeriodo:'mar-6'
+                                            },
+                                            {
+                                                aula: "692B",
+                                                diaPeriodo:'mie-6'
+                                            }
+                                        ]
                                     }
                                 ]
                             }, {
@@ -147,17 +161,13 @@ const Body: React.FC = () => {
                                         id: 1,
                                         nombreDocente: 'Benita',
                                         numGrupo: '2',
-                                        aula: '691B',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios:[]
                                     },
                                     {
                                         id: 2,
                                         nombreDocente: 'Peeters',
                                         numGrupo: '1',
-                                        aula: '691A',
-                                        horaIni: '',
-                                        horaFin: ''
+                                        horarios:[]
                                     }
                                 ]
                             }
@@ -282,218 +292,167 @@ const Body: React.FC = () => {
                     }
                 </ul>
             </div>
-            <div className='inline mt-10 ml-16'>
-                <table id='miTabla'>
-                    <thead>
-                        <tr>
-                            <th>Hora</th>
-                            <th>Lunes</th>
-                            <th>Martes</th>
-                            <th>Miercoles</th>
-                            <th>Jueves</th>
-                            <th>Viernes</th>
-                            <th>Sabado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>6:45</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>7:30</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>8:15</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>9:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>9:45</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>10:30</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>11:15</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>12:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>12:45</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>13:30</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-                        <tr>
-                            <td>14:15</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-                        <tr>
-                            <td>15:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>15:45</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>16:30</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>17:15</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>18:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>18:45</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>19:30</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-
-                        <tr>
-                            <td>20:15</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-                        <tr>
-                            <td>21:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className='tdEspecial'></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className='ml-4' id='calendar'>
+                <span className='cabezera'>HORA</span>
+                <span className='cabezera'>LUNES</span>
+                <span className='cabezera'>MARTES</span>
+                <span className='cabezera'>MIERCOLES</span>    
+                <span className='cabezera'>JUEVES</span>
+                <span className='cabezera'>VIERNES</span>
+                <span className='cabezera'>SABADO</span>
+                <div className='vacio' id='hora'>6:45</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>7:30</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>8:15</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>9:00</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>9:45</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>10:30</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>11:15</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>12:00</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>12:45</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>13:30</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>14:15</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>15:00</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>15:45</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>16:30</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>17:15</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>18:00</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>18:45</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>19:30</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>20:15</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio' id='hora'>21:00</div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <div className='vacio'></div>
+                <section  id='lun-1' className='bg-slate-400'>
+                    <p>INTRODUCCION A LA PROGRAMACION </p>
+                    <p>Aula: 691 G1</p>
+                </section>
+                <section id="lun-2" className='bg-slate-500'>INTRO DIA LUNES 2 </section>
+                <section id="lun-3" className='lun-3'>INTRO DIA LUNES 3</section>
+                <section id="lun-4" className='lun-4'>INTRO DIA LUNES 4 </section>     
+                <section id="lun-5" className='lun-5'>INTRO DIA LUNES 5</section>
+                <section id="lun-6" className='lun-6'>INTRO DIA LUNES 6 </section>                
+                <section id="lun-7" className='lun-7'>INTRO DIA LUNES 7</section>
+                <section id="lun-8" className='lun-8'>INTRO DIA LUNES 8 </section>
+                <section id="lun-9" className='lun-9'>INTRO DIA LUNES 9</section>
+                <section id="lun-10" className='lun-10'>INTRO DIA LUNES 10 </section>       
             </div>
             <a href="">
                 <img src="../imagen.png" alt="imagen" className='h-10 w-10' />

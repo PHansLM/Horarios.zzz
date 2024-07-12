@@ -34,7 +34,7 @@ const DropPrincipal: React.FC<DropPrincipalProps> = ({ carrera }) => {
                     {materia.Docentes.map((docente) => (
                       <li className="link-parent text-sm font-normal hover:text-blue-500" key={docente.nombreDocente} >
                         <h1 data-dropdownv>
-                          {docente.nombreDocente} ({docente.aula}, {docente.horaIni} - {docente.horaFin})
+                          {docente.nombreDocente} (G{docente.numGrupo})
                         </h1>
                       </li>
                     ))}

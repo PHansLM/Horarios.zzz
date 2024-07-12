@@ -25,8 +25,10 @@ export type carrerasAgregadas = {
     id: number;
     nombreDocente: string;
     numGrupo: string;
+    horarios: Horario[]
+  }
+  export type Horario ={
     aula: string;
-    horaIni: string;
-    horaFin: string;
+    diaPeriodo: string;
   }
   
