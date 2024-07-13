@@ -1,6 +1,6 @@
 export async function cargarGruposPorMateria(id_materia: number): Promise<any[]> {
   try {
-    const response = await fetch(`http://localhost:5000/get-grupos?id_materia=${id_materia}`);
+    const response = await fetch(`https://cafecitobackend-6v2teu43ta-tl.a.run.app/get-grupos?id_materia=${id_materia}`);
     const data = await response.json();
     return data;
   } catch (error) {

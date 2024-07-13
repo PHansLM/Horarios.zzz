@@ -1,7 +1,7 @@
 
 export async function cargarAvistamientos(id_grupo: number): Promise<any[]> {
   try {
-    const response = await fetch(`http://localhost:5000/get-clase-por-grupo?id_grupo=${id_grupo}`);
+    const response = await fetch(`https://cafecitobackend-6v2teu43ta-tl.a.run.app/get-clase-por-grupo?id_grupo=${id_grupo}`);
     const data = await response.json();
     return data;
   } catch (error) {
