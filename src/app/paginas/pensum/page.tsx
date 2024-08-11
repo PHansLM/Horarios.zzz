@@ -1,7 +1,12 @@
 import Header from "@/app/elementos/headerPensum";
+import BodyHorarios from "@/app/elementos/bodyPensum";
 const page = () => {
     return(
-        <Header/>  
+        <div>
+            <Header/>  
+            <BodyHorarios/>
+        </div>
+        
     );
 }
 export default page;
