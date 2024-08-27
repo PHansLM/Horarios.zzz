@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from 'react';
-import { Carrera, carrerasAgregadas } from '../type/types';
+import React, { useEffect, useState } from 'react';
+import { Carrera, carrerasAgregadas, Docente, Horario } from '../type/types';
 import DropPrincipal from './dropCarrera';
 const Body: React.FC = () => {
     // Datos de ejemplo para las opciones del combobox
@@ -161,13 +161,39 @@ const Body: React.FC = () => {
                                         id: 1,
                                         nombreDocente: 'Benita',
                                         numGrupo: '2',
-                                        horarios:[]
+                                        horarios:[
+                                            {
+                                                aula: "693B",
+                                                diaPeriodo:'vie-5'
+                                            },
+                                            {
+                                                aula: "691C",
+                                                diaPeriodo:'jue-6'
+                                            },
+                                            {
+                                                aula: "692B",
+                                                diaPeriodo:'mie-6'
+                                            }
+                                        ]
                                     },
                                     {
                                         id: 2,
                                         nombreDocente: 'Peeters',
                                         numGrupo: '1',
-                                        horarios:[]
+                                        horarios:[
+                                            {
+                                                aula: "693B",
+                                                diaPeriodo:'lun-1'
+                                            },
+                                            {
+                                                aula: "691C",
+                                                diaPeriodo:'mar-1'
+                                            },
+                                            {
+                                                aula: "692B",
+                                                diaPeriodo:'mie-1'
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -225,12 +251,27 @@ const Body: React.FC = () => {
         nombreCarrera: '',
         semestres: []
     },);
-    const [materiaSeleccionada, setMateriaSeleccionada] = useState<string | null>(null);
-
+    
+    interface materiasElegidasProps {
+        docente: Docente;
+        nombreMateria: string;
+        index: number;
+        color: string | undefined;
+        idUnico: string;
+    }
+    const [materiasSeleccionadas, setMateriasSeleccionadas] = useState<materiasElegidasProps[] | null>(null)
+    const [componentsSelect, setComponentesSelect] = useState<null>(null)
     // Función para manejar el cambio en la selección de carrera
+    useEffect(()=>{
+        if(materiasSeleccionadas !== null){
+            materiasSeleccionadas.map((index)=>{
+                
+            })
+        }
+    },[materiasSeleccionadas])
+
     const handleChangeCarrera = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const carreraID = parseInt(event.target.value);
-        console.log(carreraID);
         const tam = carreras.carrerasA.length;
         const todasLasC = carreras.carrerasA;
         for (let i = 0; i < tam; i++) {
@@ -238,15 +279,9 @@ const Body: React.FC = () => {
                 setCarreraSeleccionada(todasLasC[i])
             }
         }
-        setMateriaSeleccionada(null); // Reiniciar materia seleccionada al cambiar de carrera
+        setMateriasSeleccionadas(null); // Reiniciar materia seleccionada al cambiar de carrera
     };
 
-    // Función para manejar el cambio en la selección de materia
-    const handleChangeMateria = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const materia = event.target.value;
-        setMateriaSeleccionada(materia);
-
-    };
 
     //Funcion para maanejar la animacion del dropdown junto al gllobal.css
     const handleNavigationClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -266,8 +301,39 @@ const Body: React.FC = () => {
             }
         }
     };
-
-    return (
+    
+    const [pilaColor, setPilaColor] = useState<string[]>( 
+    [
+        'bg-blue-500',
+        'bg-green-400',
+        'bg-red-500',
+        'bg-yellow-400',
+        'bg-purple-500',
+        'bg-pink-400',
+        'bg-teal-500',
+        'bg-indigo-400',
+        'bg-orange-500',
+        'bg-gray-400'
+    ]);
+    
+    interface choquesProps {
+        keyHorarioChoque: string,
+        materias: materiasElegidasProps[]
+    }
+    const [choques, setChoques] = useState<choquesProps[]|null>(null)
+    function generarKeyAleatoria(longitud:number) {
+        const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let key = '';
+        const array = new Uint8Array(longitud);
+        window.crypto.getRandomValues(array);
+      
+        for (let i = 0; i < longitud; i++) {
+          key += caracteres[array[i] % caracteres.length];
+        }
+        
+        return key;
+    }
+    return (    
         <div className="flex container mx-auto mt-4 text-black font-semibold " data-id="menu" onClick={handleNavigationClick}>
             <div className="w-[22%] min-h-screen border-r-2  ">
                 <select
@@ -288,7 +354,15 @@ const Body: React.FC = () => {
                     {carreraSeleccionada.id === -1 ?
                         <div></div>
                         :
-                        <DropPrincipal carrera={carreraSeleccionada} />
+                        <DropPrincipal 
+                            carrera={carreraSeleccionada} 
+                            materiasSeleccionadas={materiasSeleccionadas} 
+                            setMateriasSeleccionadas={setMateriasSeleccionadas}
+                            pilaColor = {pilaColor}
+                            setPilaColor={setPilaColor}
+                            choques={choques}
+                            setChoques={setChoques}
+                        />
                     }
                 </ul>
             </div>
@@ -440,26 +514,57 @@ const Body: React.FC = () => {
                 <div className='vacio'></div>
                 <div className='vacio'></div>
                 <div className='vacio'></div>
-                <section  id='lun-1' className='bg-slate-400'>
-                    <p>INTRODUCCION A LA PROGRAMACION </p>
-                    <p>Aula: 691 G1</p>
-                </section>
-                <section id="lun-2" className='bg-slate-500'>INTRO DIA LUNES 2 </section>
-                <section id="lun-3" className='lun-3'>INTRO DIA LUNES 3</section>
-                <section id="lun-4" className='lun-4'>INTRO DIA LUNES 4 </section>     
-                <section id="lun-5" className='lun-5'>INTRO DIA LUNES 5</section>
-                <section id="lun-6" className='lun-6'>INTRO DIA LUNES 6 </section>                
-                <section id="lun-7" className='lun-7'>INTRO DIA LUNES 7</section>
-                <section id="lun-8" className='lun-8'>INTRO DIA LUNES 8 </section>
-                <section id="lun-9" className='lun-9'>INTRO DIA LUNES 9</section>
-                <section id="lun-10" className='lun-10'>INTRO DIA LUNES 10 </section>       
+                {
+                    materiasSeleccionadas === null ? 
+                    (
+                        <p></p>
+                    ) 
+                    : 
+                    (
+                        materiasSeleccionadas.map(data => {
+                            return data.docente.horarios.map(info => (
+                                <section id={info.diaPeriodo} className={data.color} key={`${data.docente.nombreDocente}${data.nombreMateria}${info.diaPeriodo}`}>
+                                    <p>{data.nombreMateria}</p>
+                                    <p>AULA: {info.aula} G:{data.docente.numGrupo}</p>
+                                </section>
+                            ));
+                        })
+                    )
+                }
+                {
+                    choques === null ? 
+                    (
+                        <p></p>
+                    ) 
+                    : 
+                    (
+                        choques.map(choque => {
+                            return <section id={choque.keyHorarioChoque} key={''+generarKeyAleatoria(16)} className="bg-white border-4 border-red-500 p-1"> 
+                                {
+                                    choque.materias.map(materia =>{
+                                        return materia.docente.horarios.map(info=>{
+                                            if(choque.keyHorarioChoque === info.diaPeriodo){
+                                                return <div key={''+generarKeyAleatoria(16)}>
+                                                    <p>{materia.nombreMateria}</p>
+                                                    <p>AULA:{info.aula} G:{materia.docente.numGrupo}</p>
+                                                </div>
+                                            }
+                                        });
+                                    })
+                                }
+                            </section>
+                        })
+                    )
+                }
             </div>
-            <a href="">
-                <img src="../imagen.png" alt="imagen" className='h-10 w-10' />
-            </a>
-            <a href="">
-                <img src="../pdfdescargar.png" alt="pdf" className='h-10 w-10 ml-4' />
-            </a>
+            <div className='block ml-2'>
+                <a href="">
+                    <img src="../imagen.png" alt="imagen" className='h-10 w-10' />
+                </a>
+                <a href="">
+                    <img src="../pdfdescargar.png" alt="pdf" className='h-10 w-10' />
+                </a>
+            </div>
 
         </div>
     );

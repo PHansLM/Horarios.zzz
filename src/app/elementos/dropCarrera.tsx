@@ -1,13 +1,29 @@
 // ../components/dropCarrera.tsx
 import React from 'react';
-
-import { Carrera, carrerasAgregadas } from '../type/types'; 
-
+import CheckBoxLabel from './checkBoxLabel';
+import { Carrera, carrerasAgregadas, Docente } from '../type/types'; 
+interface materiasElegidasProps {
+  docente: Docente;
+  nombreMateria: string;
+  index: number;
+  color: string | undefined;
+  idUnico: string;
+}
+interface choquesProps {
+  keyHorarioChoque: string,
+  materias: materiasElegidasProps[]
+}
 interface DropPrincipalProps {
   carrera: Carrera;
+  materiasSeleccionadas: materiasElegidasProps[] | null;
+  setMateriasSeleccionadas: React.Dispatch<React.SetStateAction<materiasElegidasProps[]|null>>;
+  pilaColor: string[],
+  setPilaColor:  React.Dispatch<React.SetStateAction<string[]>>;
+  choques: choquesProps[] | null
+  setChoques: React.Dispatch<React.SetStateAction<choquesProps[] | null>>;
 }
 
-const DropPrincipal: React.FC<DropPrincipalProps> = ({ carrera }) => {
+const DropPrincipal: React.FC<DropPrincipalProps> = ({ carrera, materiasSeleccionadas, setMateriasSeleccionadas, pilaColor,setPilaColor, choques, setChoques }) => {
   const { nombreCarrera, semestres } = carrera;
 
   return (
@@ -31,11 +47,22 @@ const DropPrincipal: React.FC<DropPrincipalProps> = ({ carrera }) => {
                     <svg className='ml-auto transition-transform inline' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="m17 14l-5-5m0 0l-5 5"/></svg>
                   </h1>
                   <ul className="link-child">
-                    {materia.Docentes.map((docente) => (
-                      <li className="link-parent text-sm font-normal hover:text-blue-500" key={docente.nombreDocente} >
-                        <h1 data-dropdownv>
-                          {docente.nombreDocente} (G{docente.numGrupo})
-                        </h1>
+                    {materia.Docentes.map((docente, j) => (
+                      <li className="link-parent text-sm font-normal hover:text-blue-500" key={`${docente.nombreDocente}${materia.nombreMateria}${j}`} >
+                        <CheckBoxLabel 
+                          docente={docente} 
+                          nombreMateria={materia.nombreMateria} 
+                          index={j}
+                          materiasSeleccionadas={materiasSeleccionadas}
+                          setMateriasSeleccionadas={setMateriasSeleccionadas}
+                          pilaColor={pilaColor} 
+                          setPilaColor={setPilaColor}
+                          choques={choques}
+                          setChoques={setChoques}
+                          key={j}
+                        >
+
+                        </CheckBoxLabel>  
                       </li>
                     ))}
                   </ul>

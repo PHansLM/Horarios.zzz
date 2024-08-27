@@ -192,301 +192,361 @@ section{
   margin: 1px;
 }
 #lun-1{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 2/2 span;
 }
 #lun-2{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 4/2 span;
 }
 #lun-3{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 6/2 span;
 }
 #lun-4{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 8/2 span;
 }
 #lun-5{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 10/2 span;
 }
 #lun-6{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 12/2 span;
 }
 #lun-7{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 14/2 span;
 }
 #lun-8{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 16/2 span;
 }
 #lun-9{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 18/2 span;
 }
 #lun-10{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 2/1 span;
   grid-row: 20/2 span;
 }
 #mar-1{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 2/2 span;
 }
 #mar-2{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 4/2 span;
 }
 #mar-3{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 6/2 span;
 }
 #mar-4{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 8/2 span;
 }
 #mar-5{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 10/2 span;
 }
 #mar-6{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 12/2 span;
 }
 #mar-7{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 14/2 span;
 }
 #mar-8{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 16/2 span;
 }
 #mar-9{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 18/2 span;
 }
 #mar-10{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 3/1 span;
   grid-row: 20/2 span;
 }
 #mie-1{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 2/2 span;
 }
 #mie-2{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 4/2 span;
 }
 #mie-3{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 6/2 span;
 }
 #mie-4{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 8/2 span;
 }
 #mie-5{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 10/2 span;
 }
 #mie-6{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 12/2 span;
 }
 #mie-7{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 14/2 span;
 }
 #mie-8{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 16/2 span;
 }
 #mie-9{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 18/2 span;
 }
 #mie-10{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 4/1 span;
   grid-row: 20/2 span;
 }
 #jue-1{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 2/2 span;
 }
 #jue-2{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 4/2 span;
 }
 #jue-3{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 6/2 span;
 }
 #jue-4{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 8/2 span;
 }
 #jue-5{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 10/2 span;
 }
 #jue-6{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 12/2 span;
 }
 #jue-7{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 14/2 span;
 }
 #jue-8{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 16/2 span;
 }
 #jue-9{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 18/2 span;
 }
 #jue-10{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 5/1 span;
   grid-row: 20/2 span;
 }
 #vie-1{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 2/2 span;
 }
 #vie-2{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 4/2 span;
 }
 #vie-3{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 6/2 span;
 }
 #vie-4{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 8/2 span;
 }
 #vie-5{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 10/2 span;
 }
 #vie-6{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 12/2 span;
 }
 #vie-7{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 14/2 span;
 }
 #vie-8{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 16/2 span;
 }
 #vie-9{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 18/2 span;
 }
 #vie-10{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 6/1 span;
   grid-row: 20/2 span;
 }
 #sab-1{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 2/2 span;
 }
 #sab-2{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 4/2 span;
 }
 #sab-3{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 6/2 span;
 }
 #sab-4{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 8/2 span;
 }
 #sab-5{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 10/2 span;
 }
 #sab-6{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 12/2 span;
 }
 #sab-7{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 14/2 span;
 }
 #sab-8{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 16/2 span;
 }
 #sab-9{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 18/2 span;
 }
 #sab-10{
+  align-content: center;
   font-size: 0.7rem;
   grid-column: 7/1 span;
   grid-row: 20/2 span;
